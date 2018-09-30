@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { connect } from "react-redux"
-import { addModel } from "./actions/addModels"
+import { connect } from "react-redux";
+import { addModel } from "./actions/addModels";
 
 
 const data = {
@@ -24,26 +24,17 @@ const data = {
     manufacturer: "Commodore",
     year: 1982,
     origin: "USA"
-  }
-}
+  };
+};
 
 class App extends Component {
   constructor(props){
     super(props)
     this.state = {}
-  }
+  };
   updateSelection = event => {
     this.setState({currentState: event.target.value})
  };
-
- // updateOptions() => {
- //   <option value="">-- pick a model --</option>
- //     {(Object.keys(data)).map(pc => (
- //       <option value={pc}>
- //         {pc} ({data[pc].year})
- //       </option>
- //     ))}
- // }
 
   render() {
     return (
@@ -60,9 +51,9 @@ class App extends Component {
         <button> add </button>
       </div>
     );
-  }
-}
+  };
+};
 
 
 
-export default App
+export default App;
